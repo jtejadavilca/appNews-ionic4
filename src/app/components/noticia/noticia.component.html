@@ -2,9 +2,10 @@
     <ion-card-header>
         <ion-card-subtitle>
             <span class="text-primary">{{i+1}}. </span>
-            <span class="noticia-source-primary">{{noticia.source.name}}</span>
+            <span class="noticia-source-primary">{{noticia.source.name}} </span>
         </ion-card-subtitle>
         <ion-card-title (click)="abrirNoticia()">{{noticia.title}}</ion-card-title>
+        <small>({{noticia.publishedAt | date:"dd/MM/yyyy"}})</small>
     </ion-card-header>
 
     <ion-img *ngIf="noticia.urlToImage" [src]="noticia.urlToImage" (click)="abrirNoticia()"></ion-img>
