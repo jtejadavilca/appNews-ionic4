@@ -33,7 +33,6 @@ export class Tab2Page implements OnInit {
     this.noticiasService.getTopHeadlinesCategoria(this.categoria)
     .subscribe( resp => {
       this.noticias.push(...resp.articles);
-      console.log(resp);
       if (event || resp.articles.length === 0) {
         event.target.complete();
       }
@@ -41,7 +40,6 @@ export class Tab2Page implements OnInit {
   }
 
   loadData( event ) {
-    console.log(event);
     this.cargarNoticiasPorCategoria(event);
   }
 }

@@ -16,7 +16,7 @@
         <small>({{noticia.publishedAt | date:"dd/MM/yyyy"}})</small>
     </ion-card-header>
 
-    <ion-img *ngIf="noticia.urlToImage" [src]="noticia.urlToImage" (click)="abrirNoticia()"></ion-img>
+    <ion-img *ngIf="noticia.urlToImage" [src]="noticia.urlToImage" (click)="abrirNoticia()" class="animated fadeIn fast"></ion-img>
 
     <ion-card-content>
         <p>
